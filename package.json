@@ -1,0 +1,65 @@
+{
+  "name": "mindcare-ai",
+  "version": "1.0.0",
+  "description": "AI-powered mental health & wellness platform for Indians in regional languages",
+  "main": "backend/src/server.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:backend dev:frontend",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:ml": "cd ml-models && python -m uvicorn main:app --reload",
+    "build": "npm-run-all build:backend build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "npm-run-all test:backend test:frontend",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "test:e2e": "cd frontend && npm run test:e2e",
+    "lint": "npm-run-all lint:backend lint:frontend",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "format": "npm-run-all format:backend format:frontend",
+    "format:backend": "cd backend && npm run format",
+    "format:frontend": "cd frontend && npm run format",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:build": "docker-compose build",
+    "migrate:dev": "cd backend && npm run migrate:dev",
+    "migrate:prod": "cd backend && npm run migrate:prod",
+    "seed:dev": "cd backend && npm run seed:dev",
+    "start": "npm-run-all --parallel start:backend start:frontend",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start"
+  },
+  "keywords": [
+    "mental-health",
+    "wellness",
+    "ai-chatbot",
+    "mood-tracking",
+    "crisis-management",
+    "india",
+    "regional-languages",
+    "mental-health-support"
+  ],
+  "author": "Shubham Chadda",
+  "license": "MIT",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shubham292005/MindCare-AI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shubham292005/MindCare-AI/issues"
+  },
+  "homepage": "https://mindcare-ai.com"
+}
